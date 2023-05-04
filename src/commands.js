@@ -37,9 +37,19 @@ const commands = [
       required: true,
     }]
   },
+  {
+    name: 'metabase',
+    description: 'Ask a question, search for stuff, find a viz, it\'s up to you!',
+    options: [{
+      name: 'query',
+      description: 'What do you want?',
+      type: 3, // STRING
+      required: true,
+    }]
+  },
 ];
 
-const rest = new REST({ version: '10' }).setToken(process.env.bot_token);
+const rest = new REST({ version: '10' }).setToken(process.env.discord_bot_token);
 
 (async () => {
   try {
